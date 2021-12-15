@@ -1,0 +1,284 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	margin:0;
+}
+
+body {
+	font-family: sans-serif;
+	color: white;
+}
+
+.box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+
+fieldset{
+          border: 3px solid dodgerblue;
+}
+legend{
+          border: 1px solid dodgerblue;
+          padding: 10px;
+          text-align: center;
+          background-color: dodgerblue;
+          border-radius: 8px;
+}
+.inputBox{
+            position: relative;
+        }
+.inputUser{
+          background: none;
+          border: none;
+          border-bottom: 1px solid white;
+          outline: none;
+          color: white;
+          font-size: 15px;
+          width: 100%;
+          letter-spacing: 2px;
+ }
+
+.labelInput{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          pointer-events: none;
+          transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+          top: -20px;
+          font-size: 12px;
+          color: dodgerblue;
+}
+#submit{
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 50%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+
+}
+
+#submit:hover{
+            background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+.container{
+	max-width: 1130px;
+	margin: 0 auto;
+}
+
+.header{
+	position: absolute;
+	z-index: 100;
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1790px;
+	top: 28px;
+	left:56px;
+}
+
+.header a{
+	display: inline-block;
+	background: red;
+	color: white;
+	align-self: flex-start;
+	padding: 8px 18px;
+	text-decoration: none;
+	border-radius: 3px;
+
+}
+
+.main{
+	height: 850px;
+	background: url("../img/bg.jpg") center;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+}
+
+.main-child{
+	z-index: 1;
+	display: grid;
+	align-items: center;
+
+}
+
+
+.main h1{
+	font-size: 56px;
+	max-width: 750px;
+	text-align: center;
+}
+
+.main span{
+	font-size: 20px;
+}
+
+.form-cta{
+	display: grid;
+	grid-template-columns: 500px 250px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.form-cta input{
+	padding: 20px 10px;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.form-cta button{
+	background: red;
+	outline: none;
+	border:none;
+	color: white;
+	font-size: 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+.main p{
+	font-size: 19px;
+}
+
+
+.gradient{
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.section{
+	background: black;
+	padding: 4rem 0;
+	border-top: 8px solid #222;
+}
+
+.section h1{
+	font-size: 50px;
+	margin-bottom: 16px;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+.section p{
+	font-size: 26px;
+	margin-left: 10%;
+	margin-right: 10%;	
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 1.1fr 1fr;
+	align-items: center;
+}
+
+
+.download .grid > div:first-child{
+	order:2;
+}
+.download{
+	order: 1;
+}
+
+.layout-rodape{
+	padding: 40px;
+	background-color: #363636;
+	color: #fff;
+	text-align: center;
+}
+
+@media screen and (min-width:480px){
+	.header img{
+		width: 22%;
+	}
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 549px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (max-width: 349px){
+	
+	.main-child h1 {
+		max-width: 640px;
+		margin: 0 auto;
+		font-size: 3.100rem;
+		line-height: 1.1;
+		text-align: center;
+	}
+
+	.main-child span {
+		max-width: 640px;
+		margin: 0 auto;
+		font-size: 1.300rem;
+		line-height: 1.1;
+		text-align: center;
+	}
+
+
+	button {
+		width: 50%;
+		margin: 0;
+		display: block;
+
+	}
+
+	input {
+		width: 100%;
+		margin: 0;
+	
+	}
+
+	a {
+		width: 20%;
+		display: block;
+		margin: auto;
+
+	}
+
+    .grid-container {
+  display: block;
+    }
+
+
+    .grid{
+        display: block;
+        margin: 5% auto;
+    }
+
+    div > img {
+            margin: auto;
+    }
+
+    .form-cta{
+		grid-template-columns: 230px 250px;
+	}
+
+	.form-cta button{
+		width: 100%;
+	}
+
+}
